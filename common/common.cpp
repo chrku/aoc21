@@ -25,7 +25,10 @@ std::vector<std::string> splitString(const std::string& string, const std::strin
         }
     }
 
-    res.push_back(string.substr(start));
+    auto last_token = string.substr(start);
+    if (!last_token.empty()) {
+        res.push_back(last_token);
+    }
     return res;
 }
 

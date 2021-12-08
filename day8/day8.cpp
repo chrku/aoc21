@@ -77,7 +77,7 @@ bool backtrack(std::vector<std::string>& digits,
                std::unordered_map<char, std::set<char>>& candidate_map,
                std::unordered_map<int, std::set<char>>& char_map,
                int digit_index) {
-    if (digit_index >= digits.size() - 1) {
+    if (digit_index >= digits.size()) {
         return true;
     }
 
