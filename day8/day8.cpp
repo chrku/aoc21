@@ -100,7 +100,7 @@ bool backtrack(std::vector<std::string>& digits,
                                   cur_candidates.begin(),
                                   cur_candidates.end(),
                                   std::inserter(intersect, intersect.begin()));
-            if (intersect.size() == 0) {
+            if (intersect.empty()) {
                 candidate_map = cur_candidate_map;
                 cand_works = false;
                 break;
