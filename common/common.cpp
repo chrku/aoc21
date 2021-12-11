@@ -44,3 +44,35 @@ int stringToBinary(const std::string& s) {
 
     return res;
 }
+
+std::vector<Point2i> get_neighbours_8(int row, int col, std::size_t height, std::size_t width) {
+    std::vector<Point2i> neighbours;
+    if (row > 0) {
+        neighbours.emplace_back(col, row - 1);
+    }
+    if (col > 0) {
+        neighbours.emplace_back(col - 1, row);
+    }
+    if (row > 0 && col > 0) {
+        neighbours.emplace_back(col - 1, row - 1);
+    }
+
+    if (row < height - 1) {
+        neighbours.emplace_back(col, row + 1);
+    }
+    if (col < width - 1) {
+        neighbours.emplace_back(col + 1, row);
+    }
+    if (row < height - 1 && col < width - 1) {
+        neighbours.emplace_back(col + 1, row + 1);
+    }
+
+    if (row > 0 && col < width - 1) {
+        neighbours.emplace_back(col + 1, row - 1);
+    }
+    if (row < height - 1 && col > 0) {
+        neighbours.emplace_back(col - 1, row + 1);
+    }
+
+    return neighbours;
+}

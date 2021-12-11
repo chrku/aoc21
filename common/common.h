@@ -53,4 +53,7 @@ struct LineSegment {
 using Point2i = Point2D<int>;
 using Line2i = LineSegment<int>;
 
+
+std::vector<Point2i> get_neighbours_8(int row, int col, std::size_t height, std::size_t width);
+
 #endif //AOC_COMMON_H
