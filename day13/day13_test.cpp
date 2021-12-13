@@ -13,5 +13,5 @@ TEST(Day13Test, Test1) {
 TEST(Day13Test, Test2) {
     std::ifstream ifs("input/day13_test.txt");
     int val = day13_part2(readInputLines(ifs));
-    EXPECT_EQ(val, 3509);
+    EXPECT_EQ(val, 16);
 }
