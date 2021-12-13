@@ -1,4 +1,4 @@
-add_library(day1_common STATIC day12.cpp)
+add_library(day1_common STATIC day13.cpp)
 
 add_executable(day1_main
                day1_main.cpp)
