@@ -26,6 +26,13 @@ struct Point2D {
     bool operator!=(const Point2D& rhs) const {
         return !(rhs == *this);
     }
+
+    bool operator<(const Point2D& other) const {
+        if (x < other.x) { return true; }
+        if (x > other.x) { return false; }
+        if (y < other.y) { return true; }
+        return false;
+    }
 };
 
 namespace std {
