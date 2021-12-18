@@ -5,9 +5,9 @@
 #include <iostream>
 
 int main() {
-    std::fstream ifs("input/day17.txt");
+    std::fstream ifs("input/day18.txt");
     auto input = readInputLines(ifs);
-    std::cout << day17_part1(input) << std::endl;
-    std::cout << day17_part2(input) << std::endl;
+    std::cout << day18_part1(input) << std::endl;
+    std::cout << day18_part2(input) << std::endl;
     return 0;
 }
