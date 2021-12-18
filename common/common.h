@@ -60,6 +60,8 @@ struct LineSegment {
 using Point2i = Point2D<int>;
 using Line2i = LineSegment<int>;
 
+using Point2l = Point2D<std::int64_t>;
+
 
 std::vector<Point2i> get_neighbours_8(int row, int col, std::size_t height, std::size_t width);
 
