@@ -122,6 +122,6 @@ struct Input {
   static Input parse(const std::vector<std::string> &input);
 };
 
-std::int64_t day19(const std::vector<std::string> &input);
+std::pair<std::int64_t, std::int64_t> day19(const std::vector<std::string> &input);
 
 #endif // AOC_DAY19_H

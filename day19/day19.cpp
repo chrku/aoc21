@@ -159,7 +159,8 @@ void dfs(std::size_t index, const std::multimap<std::size_t, Mapping> &mappings,
   }
 }
 
-std::int64_t day19(const std::vector<std::string> &input) {
+std::pair<std::int64_t, std::int64_t>
+day19(const std::vector<std::string> &input) {
 
   Input scanners = Input::parse(input);
   auto transformations = getTransformations();
@@ -213,7 +214,5 @@ std::int64_t day19(const std::vector<std::string> &input) {
     }
   }
 
-  std::cout << max_dist << std::endl;
-
-  return unique_beacons.size();
+  return {unique_beacons.size(), max_dist};
 }

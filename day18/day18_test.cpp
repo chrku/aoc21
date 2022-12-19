@@ -48,7 +48,7 @@ TEST(Day18Test, Test1) {
     EXPECT_EQ(val, 4140);
 }
 
-TEST(Day18Test, Test3) {
+TEST(Day18Test, Test2) {
     std::ifstream ifs("input/day18_test.txt");
     auto val = day18_part2(readInputLines(ifs));
     EXPECT_EQ(val, 3993);
