@@ -1,0 +1,336 @@
+
+a_x = 15, 12, 13, -14, 15, -7, 14, 15, 15, -7, -8, -7, -5, -10
+a_y = 15, 5, 6, 7, 9, 6, 14, 3, 1, 3, 4, 6, 7, 1
+d_z = 1, 1, 1, 26, 1, 26, 1, 1, 1, 26, 26, 26, 26, 26
+
+if (ax + z_p % 26 != w) {
+    z_next = (z_p / dz) * 26 + ay + w
+} else {
+    z_next = (z_p / dz) 
+}
+
+
+inp w  // inputs z, w
+
+mul x 0  // x = z_p % 26
+add x z  
+mod x 26 
+
+div z dz // dz = 1  
+
+add x ax // ax = 15, x = z_p  % 26 + ax
+
+eql x w  
+eql x 0  // x = (x != w)
+
+mul y 0  
+add y 25 
+
+mul y x
+add y 1  // if (x != w) { then y = 26 } else {y = 1}
+
+mul z y   // z gets multiplied by 26 or 1
+
+mul y 0
+add y w   // a_y + w gets added to z if x != w
+add y ay // ay = 15
+mul y x
+
+add z y
+
+inputs:
+z_p, w
+
+
+
+inp w
+
+mul x 0
+add x z
+mod x 26
+
+div z 1
+
+add x 12
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 5
+mul y x
+add z y
+
+inp w
+
+mul x 0
+add x z
+mod x 26
+
+div z 1
+
+add x 13
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+inp w
+
+mul x 0
+add x z
+mod x 26
+
+div z 26
+
+add x -14
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 7
+mul y x
+add z y
+
+inp w
+
+mul x 0
+add x z
+mod x 26
+
+div z 1
+
+add x 15
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 9
+mul y x
+add z y
+
+inp w
+
+mul x 0
+add x z
+mod x 26
+
+div z 26
+
+add x -7
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 14
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 14
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 15
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 3
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1
+add x 15
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 1
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26
+add x -7
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 3
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26 // z_p in [0, 26^4 -]
+add x -8
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 4
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+
+div z 26 // z_p in [0, 26^3 - 1]
+
+add x -7
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 6
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26  // z_p in [0, 26 * 26 - 1]
+add x -5
+eql x w
+eql x 0
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 7
+mul y x
+add z y
+
+inp w
+mul x 0
+add x z
+mod x 26
+
+div z 26 // z_p in [0, 25]
+
+add x -10
+eql x w
+eql x 0 // w = z_p % 26 - 10
+
+mul y 0
+add y 25
+
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w
+add y 1
+mul y x
+add z y
